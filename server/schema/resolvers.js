@@ -1,10 +1,22 @@
-const { User } = require('../models');
+const { User, Post } = require('../models');
 const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
     Query: {
         users: async () => {
             return await User.find({})
+        },
+        user: async (parent, { _id }, context)=> {  
+            if (context.user) {
+            return User.findOne({
+                _id: context.user._id 
+                });
+            }
+            throw new AuthenticationError('You need to be logged in! resolvers');
+        },
+        posts: async () => {
+            return await Post.find({})
         }
     },
     Mutation: {
@@ -30,6 +42,9 @@ const resolvers = {
         
               return { token, user };
         },
+        addPost: async ( parent, { title, message }) => {
+            return await Post.create({ title, message })
+        }
     }
 }
 

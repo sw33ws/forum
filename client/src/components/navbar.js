@@ -25,11 +25,18 @@ const Navbar = (props) => {
 
             <ul>
                 {
-                loggedIn ? <li onClick={signout}>Sign Out</li>:
+                loggedIn ?
+                <li onClick={signout}>Sign Out</li>
+                :
                 <>
                 <li><Link to="/login">Login</Link></li>
                 <li><Link to="/signup">Signup</Link></li>
                 </>
+                }
+                {
+                    loggedIn ?
+                    <li><Link to="/Post">Post</Link></li>:
+                    <></>
                 }
             </ul>
         </div>

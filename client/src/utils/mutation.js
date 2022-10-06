@@ -25,3 +25,11 @@ mutation Login($email: String!, $password: String!) {
     }
   }
 `;
+
+export const ADD_POST = gql`
+mutation AddPost($title: String!, $message: String!) {
+  addPost(title: $title, message: $message) {
+    title
+    message
+  }
+}`;

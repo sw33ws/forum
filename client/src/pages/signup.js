@@ -32,19 +32,20 @@ const Signup = () => {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
+        
         <div>
           <label className="form-label">Username</label>
-          <input type="username" name= 'username' placeholder='username' onChange={handleChange}></input>
+          <input type="username" name= 'username' placeholder='username' onChange={handleChange} className="form-control"></input>
         </div>
 
         <div>
           <label className="form-label">Email</label>
-          <input type="email" name= 'email' placeholder='email' onChange={handleChange}></input>
+          <input type="email" name= 'email' placeholder='email' onChange={handleChange} className="form-control"></input>
         </div>
 
         <div>
           <label className="form-label">Password</label>
-          <input type="password" name= 'password' placeholder='password' onChange={handleChange}></input>
+          <input type="password" name= 'password' placeholder='password' onChange={handleChange} className="form-control"></input>
         </div>
 
         <button type="submit" className="btn btn-primary"><span>Submit</span></button>

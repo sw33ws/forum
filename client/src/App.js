@@ -10,6 +10,7 @@ import Navbar from './components/navbar';
 import Home from './pages/home'
 import Login from './pages/login'
 import Signup from './pages/signup'
+import Post from './pages/formPost'
 
 // Construct our main GraphQL API endpoint
 const httpLink = 
@@ -48,6 +49,9 @@ function App() {
 
                 {/* landing page */}
                 <Route path='/' element={<Home />} />
+
+                {/* form posting page */}
+                <Route path='/post' element={<Post />} />
               </Routes>
             </Router>
       </ApolloProvider>
