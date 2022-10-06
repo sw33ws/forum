@@ -1,9 +1,12 @@
 import React from 'react'
+import { useQuery } from "@apollo/client";
+import { GET_POSTS } from '../utils/queries';
 
-function Home() {
+const Home = () => {
+
   return (
     <div>
-        <h1>hi</h1>
+
     </div>
   )
 }

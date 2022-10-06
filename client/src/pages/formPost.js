@@ -26,12 +26,12 @@ const Post = () => {
         <form id='contactInfoForm' onSubmit={handleFormSubmit}>
             <div className="mb-3">
                 <label className="form-label">Title</label>
-                <input type="text" className="form-control" name='title' onChange={handleChange}></input>
+                <input type="text" className="form-control" name='title' onChange={handleChange} maxLength="100"></input>
             </div>
 
             <div className="mb-3">
                 <label className="form-label">Message</label>
-                <textarea className="form-control" rows="3" name='message' onChange={handleChange}></textarea>
+                <textarea className="form-control" rows="3" name='message' onChange={handleChange} maxLength="500"></textarea>
             </div>
 
             <button type="submit" className="btn btn-primary"><span id='submitButton'>Submit</span></button>
