@@ -2,6 +2,8 @@ import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
 import { ADD_POST } from '../utils/mutation.js';
 
+import '../styles/formPost.css';
+
 const Post = () => {
   const [ postInfo ] = useMutation(ADD_POST);
   const [ postForm, setPostForm] = useState({ title: '', message: ''});
@@ -22,7 +24,7 @@ const Post = () => {
   }
 
   return (
-    <div>
+    <div class='formPostBody'>
         <form id='contactInfoForm' onSubmit={handleFormSubmit}>
             <div className="mb-3">
                 <label className="form-label">Title</label>
@@ -34,7 +36,7 @@ const Post = () => {
                 <textarea className="form-control" rows="3" name='message' onChange={handleChange} maxLength="500"></textarea>
             </div>
 
-            <button type="submit" className="btn btn-primary"><span id='submitButton'>Submit</span></button>
+            <button type="submit" className="btn"><span id='submitButton'>Submit</span></button>
             </form>
     </div>
   )

@@ -1,0 +1,36 @@
+.formPostBody {
+    height: 90vh;
+    background-color: rgb(255, 250, 160);
+    overflow: hidden;
+    text-align: center;
+}
+
+.formPostBody > * {
+    text-align: left;
+}
+
+#contactInfoForm {
+    display: inline-block;
+    margin: 10rem;
+    padding: 10px 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(34,24,18);
+    background-color: rgb(34,24,18);
+    width: 500px;
+}
+
+.form-label {
+    background-color: rgb(34,24,18);
+    width: 100%;
+    color: rgb(255,255,240);
+}
+
+#submitButton {
+    color: rgb(255,255,240);
+    background-color: brown;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 8px;
+    padding: 3px 10px;
+}

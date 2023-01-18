@@ -1,0 +1,24 @@
+.postBody {
+    display: grid;
+    padding: 5vw;
+    gap: 5vw;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+}
+
+.post {
+    background-color: brown;
+    border-style: solid;
+    border-color: rgb(34,24,18);
+    height: 15rem;
+}
+
+.postTitle {
+    color: rgb(255,255,240);
+    background-color: rgb(34,24,18);
+}
+
+.postText {
+    color: rgb(255,255,240);
+    font-size: 16;
+}

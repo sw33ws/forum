@@ -1,0 +1,29 @@
+nav {
+    background-color: rgb(34,24,18);
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+#NavTitle {
+    color: rgb(240,255,255);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul > li {
+    font-size: 2rem;
+}
+
+li {
+    padding-left: 2rem;
+}
+
+#navtext {
+    color: rgb(255,255,240);
+}

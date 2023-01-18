@@ -3,6 +3,8 @@ import { useMutation } from '@apollo/client'
 import Auth from '../utils/auth.js';
 import { ADD_USER } from '../utils/mutation.js';
 
+import '../styles/signup.css';
+
 const Signup = () => {
   const [addUser] = useMutation(ADD_USER);
   const [ signupForm, setSignupForm ] = useState({ email: '', password: ''})
@@ -30,8 +32,8 @@ const Signup = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleFormSubmit}>
+    <div class='signupBody'>
+      <form onSubmit={handleFormSubmit} id='signupForm'>
         
         <div>
           <label className="form-label">Username</label>
@@ -48,7 +50,7 @@ const Signup = () => {
           <input type="password" name= 'password' placeholder='password' onChange={handleChange} className="form-control"></input>
         </div>
 
-        <button type="submit" className="btn btn-primary"><span>Submit</span></button>
+        <button type="submit" className="btn"><span id='submitButton'>Submit</span></button>
       </form>
     </div>
   )

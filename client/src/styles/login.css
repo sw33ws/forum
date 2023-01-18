@@ -1,0 +1,21 @@
+.loginBody {
+    height: 90vh;
+    background-color: rgb(255, 250, 160);
+    overflow: hidden;
+    text-align: center;
+}
+
+.loginBody > * {
+    text-align: left;
+}
+
+#loginForm {
+    display: inline-block;
+    margin: 10rem;
+    padding: 10px 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(34,24,18);
+    background-color: rgb(34,24,18);
+    width: 500px;
+}

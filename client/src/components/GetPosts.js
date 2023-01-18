@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { useQuery, gql } from "@apollo/client";
 import { GET_POSTS } from '../utils/queries';
 
+import '../styles/getPost.css';
+
 function GetPosts() {
 
     const {error, loading, data} = useQuery(GET_POSTS);
@@ -13,13 +15,10 @@ function GetPosts() {
     }, [data])
     console.log(data)
     return(
-        <div>
+        <div class='postBody'>
             {posts.map((val) => {
-                return <div> <h1>{val.title}</h1> {val.message} </div>
+                return <div class='post'> <h1 class='postTitle'>{val.title}</h1> <p class='postText'>{val.message}</p></div>
             })}
-            {/* {posts.map((val) => {
-                return <h2> {val.message}</h2>
-            })} */}
         </div>
     )
 }
