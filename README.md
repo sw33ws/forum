@@ -1,3 +1,3 @@
-# forms
+# forum
 
-This is a public form, where you can signup, and make posts. Signup and login, with jwt.
+This is a public forum, where you can signup, and make posts. Signup and login, with jwt.
