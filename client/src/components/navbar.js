@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import jwtdecode from 'jwt-decode';
 import { useState, useEffect } from 'react';
 
 import '../styles/navbar.css';

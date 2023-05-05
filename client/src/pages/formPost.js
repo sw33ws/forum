@@ -1,5 +1,5 @@
 import { useMutation } from '@apollo/client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ADD_POST } from '../utils/mutation.js';
 
 import '../styles/formPost.css';
@@ -8,11 +8,27 @@ const Post = () => {
   const [ postInfo ] = useMutation(ADD_POST);
   const [ postForm, setPostForm] = useState({ title: '', message: ''});
 
+  const [loggedIn, setLoggedIn] = useState(false)
+    const token = localStorage.getItem('id_token')
+
+    useEffect(() => {
+        if(token){
+            setLoggedIn(true)
+        } else if(!token) {
+            return
+        }
+    }, [ loggedIn, token ])
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    await postInfo ({
-      variables: { title: postForm.title, message: postForm.message }
-    })
+    if (loggedIn) {
+      await postInfo ({
+        variables: { title: postForm.title, message: postForm.message }
+      })
+    }
+    else {
+      alert('please login')
+    }
   }
 
   const handleChange = (event) => {
