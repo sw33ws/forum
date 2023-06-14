@@ -18,6 +18,7 @@ const Navbar = (props) => {
     const signout = () => {
         localStorage.clear()
         setLoggedIn(false)
+        window.location.reload(false);
     }
 
     return(

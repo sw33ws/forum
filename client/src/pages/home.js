@@ -1,6 +1,6 @@
 import React from 'react'
-import { useQuery, gql } from "@apollo/client";
-import { GET_POSTS } from '../utils/queries';
+// import { useQuery, gql } from "@apollo/client";
+// import { GET_POSTS } from '../utils/queries';
 
 import '../styles/home.css';
 import GetPosts from '../components/GetPosts';

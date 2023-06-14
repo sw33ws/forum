@@ -40,7 +40,11 @@ const Post = () => {
   }
 
   return (
-    <div class='formPostBody'>
+
+    <div>
+    {
+      loggedIn ?
+      <div class='formPostBody'>
         <form id='contactInfoForm' onSubmit={handleFormSubmit}>
             <div className="mb-3">
                 <label className="form-label">Title</label>
@@ -54,7 +58,26 @@ const Post = () => {
 
             <button type="submit" className="btn"><span id='submitButton'>Submit</span></button>
             </form>
+    </div>:
+      <><div className='form-signin'><h1 className='form-signin-text'>Please Sign in too make Posts</h1></div></>
+    }
     </div>
+
+    // <div class='formPostBody'>
+    //     <form id='contactInfoForm' onSubmit={handleFormSubmit}>
+    //         <div className="mb-3">
+    //             <label className="form-label">Title</label>
+    //             <input type="text" className="form-control" name='title' onChange={handleChange} maxLength="100"></input>
+    //         </div>
+
+    //         <div className="mb-3">
+    //             <label className="form-label">Message</label>
+    //             <textarea className="form-control" rows="3" name='message' onChange={handleChange} maxLength="500"></textarea>
+    //         </div>
+
+    //         <button type="submit" className="btn"><span id='submitButton'>Submit</span></button>
+    //         </form>
+    // </div>
   )
 }
 
